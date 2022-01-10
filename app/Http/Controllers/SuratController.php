@@ -10,5 +10,15 @@ class SuratController extends Controller
     {
         return view('dashboard.index');
     }
+
+    function list()
+    {
+        return view('surat.list');
+    }
+
+    function create()
+    {
+        return view('surat.form');
+    }
     
 }

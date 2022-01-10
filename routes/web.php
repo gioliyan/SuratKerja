@@ -18,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'SuratController@index');
+Route::get('/listsurat', 'SuratController@list');
+Route::get('/createsurat', 'SuratController@create');
+Route::post('/createsurat/post', 'SuratController@create');
