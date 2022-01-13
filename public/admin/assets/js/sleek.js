@@ -215,4 +215,8 @@ $(document).ready(function() {
   cardClosebutton.on('click', function () {
     body.removeClass('right-sidebar-in').addClass('right-sidebar-out');
   })
+
+  $(function(){
+    $('#datepicker').datepicker();
+  });
 });

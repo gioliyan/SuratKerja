@@ -21,14 +21,13 @@
             <!-- sidebar menu -->
             <ul class="nav sidebar-inner" id="sidebar-menu">
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="{{ url('/') }}" data-toggle="collapse"
-                        data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                    <a class="sidenav-item-link" href="{{ url('/') }}" data-toggle="collapse" data-target="#dashboard"
+                        aria-expanded="false" aria-controls="dashboard">
                         <i class="mdi mdi-view-dashboard-outline"></i>
                         <span class="nav-text">Dashboard</span>
                         <b class="caret"></b>
                     </a>
-                    <!-- <ul class="collapse " id="dashboard"
-                        data-parent="#sidebar-menu">
+                    <ul class="collapse " id="dashboard" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li class="active">
                                 <a class="sidenav-item-link" href="{{ url('/') }}">
@@ -36,7 +35,7 @@
                                 </a>
                             </li>
                         </div>
-                    </ul> -->
+                    </ul>
                 </li>
 
                 <li class="has-sub ">
@@ -46,8 +45,7 @@
                         <span class="nav-text">Surat</span>
                         <b class="caret"></b>
                     </a>
-                    <ul class="collapse " id="components"
-                        data-parent="#sidebar-menu">
+                    <ul class="collapse " id="components" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
                                 <a class="sidenav-item-link" href="{{ url('/listsurat') }}">
