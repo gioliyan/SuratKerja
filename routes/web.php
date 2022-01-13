@@ -23,4 +23,11 @@ Route::get('/createsurat', 'SuratController@create');
 Route::post('/createsurat/post', 'SuratController@store');
 Auth::routes();
 
+Route::middleware(['auth'])->group(function(){
+    Route::get('/', 'SuratController@index', function(){});
+    Route::get('/listsurat', 'SuratController@list', function(){});
+    Route::get('/createsurat', 'SuratController@create', function(){});
+    Route::get('/createsurat/post', 'SuratController@store', function(){});
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
