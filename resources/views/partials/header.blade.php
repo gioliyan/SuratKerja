@@ -36,7 +36,6 @@
                                 <small class="pt-1"></small>
                             </div>
                         </li>
-                       
                     </ul>
                 </li>
             </ul>
