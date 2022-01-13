@@ -66,7 +66,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tanggalkembali">Tanggal Kembali</label>
-                            <input type="text" class="form-control" id="tgl_kembali" placeholder="Tanggal Kembali">
+                            <input type="text" class="form-control" name="tgl_kembali" placeholder="Tanggal Kembali">
                         </div>
                         <div class="form-group">
                             <label for="instansiang">Instansi Ang</label>

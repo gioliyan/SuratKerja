@@ -18,27 +18,27 @@
                             <th>Action</th>
                         </thead>
                         <tbody>
-                            @foreach ($mails as $email)
+                            @forelse ($mails as $mail)
                             <tr>
-                                <td>{{ $email->nomor_surat }}</td>
-                                <td>{{ $email->perihal }}</td>
-                                <td>{{ $email->surat_dari }}</td>
-                                <td>{{ $email->tertanggal }}</td>
+                                <td>{{ $mail->nomor_surat }}</td>
+                                <td>{{ $mail->perihal }}</td>
+                                <td>{{ $mail->surat_dari }}</td>
+                                <td>{{ $mail->tertanggal }}</td>
                                 <td>
                                     print
                                 </td>
                             </tr>
-                            
+                            @empty
                             <tr>
                                 <td colspan="6">No records found</td>
                             </tr>
-                            @endforeach
+                            @endforelse
                         </tbody>
                     </table>
-                    {{ $email->links() }}
+                    
                 </div>
                 <div class="card-footer text-right">
-                    <a href="{{ url('admin/produks/create') }}" class="btn btn-primary">Add New</a>
+                    <a href="{{ url('/createsurat') }}" class="btn btn-primary">Add New</a>
                 </div>
             </div>
         </div>

@@ -50,7 +50,7 @@ class SuratController extends Controller
 
         $mail->save();
 
-        return $request->all();
+        return redirect('surat.list');
     }
 
     
