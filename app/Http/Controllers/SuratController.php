@@ -14,9 +14,10 @@ class SuratController extends Controller
 
     public function list()
     {
-        $mails = Mail::all();
+        $this->data['mails'] = Mail::orderby('tertanggal', 'ASC')->paginate(10);
+        // $mails = Mail::all()->paginate(10);
 
-        return view('surat.list', compact('mails'));
+        return view('surat.list', $this->data);
     }
 
     public function create()
@@ -50,7 +51,7 @@ class SuratController extends Controller
 
         $mail->save();
 
-        return redirect('surat.list');
+        return redirect('/listsurat');
     }
 
     

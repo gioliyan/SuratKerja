@@ -17,7 +17,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tertanggal">Tertanggal</label>
-                            <input type="text" class="datepicker_input form-control border-2" name="tertanggal" required
+                            <input type="date" class="datepicker_input form-control border-2" name="tertanggal" required
                                 placeholder="DD/MM/YYYY">
                         </div>
                         <div class="form-group">
@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tanggal">Tanggal</label>
-                            <input type="text" class="form-control" name="tanggal" placeholder="Tanggal">
+                            <input type="date" class="form-control" name="tanggal" placeholder="Tanggal">
                         </div>
                         <div class="form-group">
                             <label for="tujuan">Tujuan Surat</label>
@@ -62,11 +62,11 @@
                         </div>
                         <div class="form-group">
                             <label for="tanggalberangkat">Tanggal Berangkat</label>
-                            <input type="text" class="form-control" name="tgl_berangkat" placeholder="Tanggal Berangkat">
+                            <input type="date" class="form-control" name="tgl_berangkat" placeholder="Tanggal Berangkat">
                         </div>
                         <div class="form-group">
                             <label for="tanggalkembali">Tanggal Kembali</label>
-                            <input type="text" class="form-control" name="tgl_kembali" placeholder="Tanggal Kembali">
+                            <input type="date" class="form-control" name="tgl_kembali" placeholder="Tanggal Kembali">
                         </div>
                         <div class="form-group">
                             <label for="instansiang">Instansi Ang</label>
