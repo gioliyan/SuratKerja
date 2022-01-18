@@ -25,7 +25,7 @@
                                 <td>{{ $mail->surat_dari }}</td>
                                 <td>{{ $mail->tertanggal }}</td>
                                 <td>
-                                    print
+                                    <a href="{{ url('/surat/cetakpdf/'. $mail->id .'') }}" class="btn btn-primary">Print</a>
                                 </td>
                             </tr>
                             @empty
@@ -35,7 +35,6 @@
                             @endforelse
                         </tbody>
                     </table>
-                    
                 </div>
                 <div class="card-footer text-right">
                     <a href="{{ url('/createsurat') }}" class="btn btn-primary">Add New</a>

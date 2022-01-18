@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Mail;
 
+use PDF;
+
 class SuratController extends Controller
 {
     public function index()
@@ -14,7 +16,7 @@ class SuratController extends Controller
 
     public function list()
     {
-        $this->data['mails'] = Mail::orderby('tertanggal', 'ASC')->paginate(10);
+        $this->data['mails'] = Mail::orderby('created_at', 'DESC')->paginate(10);
         // $mails = Mail::all()->paginate(10);
 
         return view('surat.list', $this->data);
@@ -54,5 +56,11 @@ class SuratController extends Controller
         return redirect('/listsurat');
     }
 
-    
+    public function print($id)
+    {
+        $this->data['mails'] = Mail::findOrFail($id);
+        $pdf = PDF::loadview('surat.print', $this->data);
+        return $pdf->stream("Surat SPPD", array("Attachment" => false));
+        exit(0);
+    }
 }

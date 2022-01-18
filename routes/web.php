@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/listsurat', 'SuratController@list');
 // Route::get('/createsurat', 'SuratController@create');
 // Route::post('/createsurat/post', 'SuratController@store');
+Route::get('surat/cetakpdf/{surat_id}', 'SuratController@print');
 Auth::routes();
 
 Route::middleware(['auth'])->group(function(){
