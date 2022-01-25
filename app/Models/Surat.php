@@ -24,4 +24,9 @@ class Surat extends Model
         'dari_tanggal',
         'sampai_tanggal',
     ];
+
+    public function pegawai()
+    {
+        return $this->belongsTo('App\Models\Pegawai', 'kategori_id');
+    }
 }

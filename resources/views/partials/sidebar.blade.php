@@ -67,6 +67,35 @@
                         </div>
                     </ul>
                 </li>
+                <li class="has-sub ">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#components" aria-expanded="false" aria-controls="components">
+                        <i class="mdi mdi-folder-multiple-outline"></i>
+                        <span class="nav-text">Pegawai</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="collapse " id="components" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{ url('/listsurat') }}">
+                                    <span class="nav-text">Tambah Pegawai</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="sidenav-item-link" href="{{ url('/createsurat') }}">
+                                    <span class="nav-text">List Pegawai</span>
+                                </a>
+                            </li>
+
+                            <!-- <li>
+                                <a class="sidenav-item-link" href="">
+                                    <span class="nav-text">Edit Kategori</span>
+                                </a>
+                            </li> -->
+                        </div>
+                    </ul>
+                </li>
 
                 <!-- <li class="has-sub ">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#icons"

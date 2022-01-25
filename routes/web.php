@@ -29,6 +29,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/listsurat', 'SuratController@list', function(){});
     Route::get('/createsurat', 'SuratController@create', function(){});
     Route::post('/createsurat/post', 'SuratController@store', function(){});
+    Route::get('/createpegawai', 'PegawaiController@create', function(){});
+    Route::post('/createpegawai/post', 'SuratController@store', function(){});
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

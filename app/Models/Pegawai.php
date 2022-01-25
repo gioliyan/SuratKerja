@@ -14,4 +14,9 @@ class Pegawai extends Model
         'pangkat',
         'jabatan'
     ];
+
+    public function surats()
+    {
+        return $this->hasMany('App\Model\Kategori', 'kategori_id');
+    }
 }
