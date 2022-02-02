@@ -27,10 +27,14 @@ Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/', 'SuratController@index', function(){});
     Route::get('/listsurat', 'SuratController@list', function(){});
+    Route::get('/listpegawai', 'PegawaiController@list', function(){});
     Route::get('/createsurat', 'SuratController@create', function(){});
     Route::post('/createsurat/post', 'SuratController@store', function(){});
     Route::get('/createpegawai', 'PegawaiController@create', function(){});
-    Route::post('/createpegawai/post', 'SuratController@store', function(){});
+    Route::post('/createpegawai/post', 'PegawaiController@store', function(){});
+    Route::get('/pegawai/{pegawai_id}/edit', 'PegawaiController@edit', function(){});
+    Route::put('/pegawai/{pegawai_id}', 'PegawaiController@update', function(){});
+    Route::delete('/pegawai/{pegawai_id}', 'PegawaiController@destroy', function(){});
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
