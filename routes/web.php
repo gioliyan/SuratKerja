@@ -35,6 +35,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/pegawai/{pegawai_id}/edit', 'PegawaiController@edit', function(){});
     Route::put('/pegawai/{pegawai_id}', 'PegawaiController@update', function(){});
     Route::delete('/pegawai/{pegawai_id}', 'PegawaiController@destroy', function(){});
+    Route::get('/createkerja', 'KerjaController@create', function(){});
+    Route::post('/createkerja/post', 'KerjaController@store', function(){});
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

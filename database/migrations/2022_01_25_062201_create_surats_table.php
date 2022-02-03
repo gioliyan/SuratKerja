@@ -16,11 +16,6 @@ class CreateSuratsTable extends Migration
         Schema::create('surats', function (Blueprint $table) {
             $table->id();
             $table->text('dasar');
-            $table->unsignedBigInteger('pegawai_id');
-            $table->String('nm_pegawai');
-            $table->String('nip_pegawai');
-            $table->String('pangkat_pegawai');
-            $table->String('jabatan_pegawai');
             $table->text('untuk');
             $table->text('tujuan_surat');
             $table->text('instansi');
@@ -29,9 +24,11 @@ class CreateSuratsTable extends Migration
             $table->String('transportasi');
             $table->date('dari_tanggal');
             $table->date('sampai_tanggal');
+            $table->integer('biaya_perhari');
+            $table->integer('lama_hari');
+            $table->integer('total');
+            $table->integer('jumlah');
             $table->timestamps();
-
-            $table->foreign('pegawai_id')->references('id')->on('pegawais')->onDelete('cascade');
         });
     }
 
