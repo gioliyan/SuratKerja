@@ -38,7 +38,32 @@ class KerjaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kerja = new Kerja();
+
+        $kerja->nama_pg1 = request('nama_pg1');
+        $kerja->nip_pg1 = request('nip_pg1');
+        $kerja->pangkat_pg1 = request('pangkat_pg1');
+        $kerja->jabatan_pg1 = request('jabatan_pg1');
+        $kerja->nama_pg2 = request('nama_pg2');
+        $kerja->nip_pg2 = request('nip_pg2');
+        $kerja->pangkat_pg2 = request('pangkat_pg2');
+        $kerja->jabatan_pg2 = request('jabatan_pg2');
+        $kerja->nama_pg3 = request('nama_pg3');
+        $kerja->nip_pg3 = request('nip_pg3');
+        $kerja->pangkat_pg3 = request('pangkat_pg3');
+        $kerja->jabatan_pg3 = request('jabatan_pg3');
+        $kerja->nama_pg4 = request('nama_pg4');
+        $kerja->nip_pg4 = request('nip_pg4');
+        $kerja->pangkat_pg4 = request('pangkat_pg4');
+        $kerja->jabatan_pg4 = request('jabatan_pg4');
+        $kerja->nama_pg5 = request('nama_pg5');
+        $kerja->nip_pg5 = request('nip_pg5');
+        $kerja->pangkat_pg5 = request('pangkat_pg5');
+        $kerja->jabatan_pg5 = request('jabatan_pg5');
+
+        $kerja->save();
+
+        return redirect('/createsurat');
     }
 
     /**

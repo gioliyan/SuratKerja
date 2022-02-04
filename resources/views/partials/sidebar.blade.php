@@ -54,7 +54,7 @@
                             </li>
 
                             <li>
-                                <a class="sidenav-item-link" href="{{ url('/createsurat') }}">
+                                <a class="sidenav-item-link" href="{{ url('/createkerja') }}">
                                     <span class="nav-text">Buat Surat</span>
                                 </a>
                             </li>

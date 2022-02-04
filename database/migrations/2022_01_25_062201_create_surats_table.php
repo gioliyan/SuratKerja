@@ -22,12 +22,12 @@ class CreateSuratsTable extends Migration
             $table->String('dari');
             $table->String('menuju');
             $table->String('transportasi');
-            $table->date('dari_tanggal');
-            $table->date('sampai_tanggal');
-            $table->integer('biaya_perhari');
-            $table->integer('lama_hari');
-            $table->integer('total');
-            $table->integer('jumlah');
+            $table->String('dari_tanggal');
+            $table->String('sampai_tanggal');
+            $table->String('biaya_perhari');
+            $table->String('lama_hari');
+            $table->String('total');
+            $table->String('jumlah');
             $table->timestamps();
         });
     }

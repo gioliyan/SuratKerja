@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Mail;
+use App\Models\Surat;
 
 use PDF;
 
@@ -16,7 +16,7 @@ class SuratController extends Controller
 
     public function list()
     {
-        $this->data['mails'] = Mail::orderby('created_at', 'DESC')->paginate(10);
+        $this->data['mails'] = Surat::orderby('created_at', 'DESC')->paginate(10);
         // $mails = Mail::all()->paginate(10);
 
         return view('surat.list', $this->data);
@@ -29,27 +29,21 @@ class SuratController extends Controller
 
     public function store(Request $request)
     {
-        $mail = new Mail();
+        $mail = new Surat();
 
-        $mail->surat_dari = request('surat_dari');
-        $mail->tertanggal = request('tertanggal');
-        $mail->nomor_surat = request('nomor_surat');
-        $mail->perihal = request('perihal');
-        $mail->pembuka = request('pembuka');
-        $mail->isi_surat = request('isi_surat');
-        $mail->tanggal = request('tanggal');
+        $mail->dasar = request('dasar');
+        $mail->untuk = request('untuk');
         $mail->tujuan_surat = request('tujuan_surat');
-        $mail->pembayaran = request('pembayaran');
-        $mail->angkutan = request('angkutan');
-        $mail->berangkat = request('berangkat');
-        $mail->tujuan = request('tujuan');
-        $mail->tgl_berangkat = request('tgl_berangkat');
-        $mail->tgl_kembali = request('tgl_kembali');
-        $mail->instansi_ang = request('instansi_ang');
-        $mail->mata_ang = request('mata_ang');
-        $mail->keterangan = request('keterangan');
-        $mail->acuan_konsep = request('acuan_konsep');
-        $mail->operator = request('operator');
+        $mail->instansi = request('instansi');
+        $mail->dari = request('dari');
+        $mail->menuju = request('menuju');
+        $mail->transportasi = request('transportasi');
+        $mail->dari_tanggal = request('dari_tanggal');
+        $mail->sampai_tanggal = request('sampai_tanggal');
+        $mail->biaya_perhari = request('biaya_perhari');
+        $mail->lama_hari = request('lama_hari');
+        $mail->total = request('total');
+        $mail->jumlah = request('jumlah');
 
         $mail->save();
 
@@ -58,7 +52,7 @@ class SuratController extends Controller
 
     public function print($id)
     {
-        $this->data['mails'] = Mail::findOrFail($id);
+        $this->data['mails'] = Surat::findOrFail($id);
         $pdf = PDF::loadview('surat.print', $this->data);
         return $pdf->stream("Surat SPPD", array("Attachment" => false));
         exit(0);

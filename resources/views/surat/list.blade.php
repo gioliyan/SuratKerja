@@ -11,19 +11,19 @@
                 <div class="card-body">
                     <table class="table table-bordered table-stripped">
                         <thead>
-                            <th>Nomor Surat</th>
-                            <th>Perihal</th>
-                            <th>Surat Dari</th>
-                            <th>Tertanggal</th>
+                            <th>#</th>
+                            <th>Nama Instansi</th>
+                            <th>Dari Tanggal</th>
+                            <th>Sampai Tanggal</th>
                             <th>Action</th>
                         </thead>
                         <tbody>
                             @forelse ($mails as $mail)
                             <tr>
-                                <td>{{ $mail->nomor_surat }}</td>
-                                <td>{{ $mail->perihal }}</td>
-                                <td>{{ $mail->surat_dari }}</td>
-                                <td>{{ $mail->tertanggal }}</td>
+                                <td>{{ $mail->id }}</td>
+                                <td>{{ $mail->instansi }}</td>
+                                <td>{{ $mail->dari_tanggal }}</td>
+                                <td>{{ $mail->sampai_tanggal }}</td>
                                 <td>
                                     <a href="{{ url('/surat/cetakpdf/'. $mail->id .'') }}" class="btn btn-primary">Print</a>
                                 </td>
