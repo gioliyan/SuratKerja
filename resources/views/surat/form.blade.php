@@ -19,10 +19,6 @@
                             <label for="isisurat" class="form-label">Untuk</label>
                             <textarea class="form-control" name="untuk" rows="3" placeholder="Untuk"></textarea>
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="isisurat" class="form-label">Tujuan Surat</label>
-                            <textarea class="form-control" name="tujuan_surat" rows="3" placeholder="Tujuan Surat"></textarea>
-                        </div>
                         <div class="form-group">
                             <label for="nomorsurat">Nama Instansi</label>
                             <input type="text" class="form-control" name="instansi" placeholder="Nama Instansi">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Surat;
+use App\Models\Kerja;
 
 use PDF;
 
@@ -33,7 +34,6 @@ class SuratController extends Controller
 
         $mail->dasar = request('dasar');
         $mail->untuk = request('untuk');
-        $mail->tujuan_surat = request('tujuan_surat');
         $mail->instansi = request('instansi');
         $mail->dari = request('dari');
         $mail->menuju = request('menuju');
@@ -53,6 +53,7 @@ class SuratController extends Controller
     public function print($id)
     {
         $this->data['mails'] = Surat::findOrFail($id);
+        $this->data['gawais'] = Kerja::findOrFail($id);
         $pdf = PDF::loadview('surat.print', $this->data);
         return $pdf->stream("Surat SPPD", array("Attachment" => false));
         exit(0);

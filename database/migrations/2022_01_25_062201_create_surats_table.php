@@ -17,7 +17,6 @@ class CreateSuratsTable extends Migration
             $table->id();
             $table->text('dasar');
             $table->text('untuk');
-            $table->text('tujuan_surat');
             $table->text('instansi');
             $table->String('dari');
             $table->String('menuju');

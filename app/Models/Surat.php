@@ -16,7 +16,6 @@ class Surat extends Model
         'pangkat_pegawai',
         'jabatan_pegawai',
         'untuk',
-        'tujuan_surat',
         'instansi',
         'dari',
         'menuju',
